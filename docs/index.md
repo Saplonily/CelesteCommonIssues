@@ -288,7 +288,7 @@ System.OutOfMemoryException: Insufficient memory to continue the execution of th
 ### System.IO.FileNotFoundException: Could not load file or assembly 'CelesteNet.Client, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
 `Guneline` mod 与群服出现的兼容问题, 如果该 mod 是必要的那只能暂时关闭群服 mod (注意不仅仅是关闭与群服的连接).
 
-# Everest 安装报错
+## Everest 安装报错
 
 ### 如何找到 miniinstaller-log.txt?
 `/installer-log`  
@@ -383,7 +383,7 @@ main.lua:61: in function <main.lua:25>
 你的用户名包含了中文字符, 临时的解决方案需要为 Loenn 的 exe 文件新建一个快捷方式, 然后右键打开其属性, 在 `快捷方式` 栏的 `目标` 后面添加 ` --portable` (注意空格和双横杠),
 例如 `"D:\Softwares\Loenn\Lönn.exe"` 更改为 `"D:\Softwares\Loenn\Lönn.exe" --portable`, 然后使用该快捷方式打开 Loenn.
 
-# 其他指令
+## 其他指令
 
 ### `/verifyfiles`
 在 steam 上: 右键游戏, 选择 `属性`, 打开 `已安装文件` 页面, 点击 `验证游戏文件的完整性`, 然后 steam 会开始下载缺失和不匹配的文件.  
@@ -393,9 +393,9 @@ main.lua:61: in function <main.lua:25>
 在打包你的 mod 时不要对着文件夹右键点击压缩, 你需要进入文件夹内, 全选文件(Ctrl + A), 然后再右键选择压缩. 压缩等级推荐选最低等级, 压缩等级过高可能会轻微拖慢游戏启动速度.
 
 ### `/hardlist`
-hist 榜单链接:
-https://docs.google.com/spreadsheets/d/1A88F3X2lOQJry-Da2NpnAr-w5WDrkjDtg7Wt0kLCiz8/edit#gid=1904725075
+hist 榜链接:
+[https://docs.google.com/spreadsheets/d/1A88F3X2lOQJry-Da2NpnAr-w5WDrkjDtg7Wt0kLCiz8/edit#gid=1904725075](https://docs.google.com/spreadsheets/d/1A88F3X2lOQJry-Da2NpnAr-w5WDrkjDtg7Wt0kLCiz8/edit#gid=1904725075)
 
 ### `/goldenlist`
 金榜链接:
-https://docs.google.com/spreadsheets/u/1/d/1v0yhceinMGr5alNekOxEkYCxXcYUsbtzMRVMezxbcVY/edit
+[https://docs.google.com/spreadsheets/u/1/d/1v0yhceinMGr5alNekOxEkYCxXcYUsbtzMRVMezxbcVY/edit](https://docs.google.com/spreadsheets/u/1/d/1v0yhceinMGr5alNekOxEkYCxXcYUsbtzMRVMezxbcVY/edit)

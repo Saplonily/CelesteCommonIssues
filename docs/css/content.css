@@ -1,0 +1,11 @@
+.md-sidebar {
+    width: 16rem;
+}
+
+.md-grid {
+    max-width: 80%;
+}
+
+[dir=ltr] .md-sidebar__inner {
+    padding-right: 0px;
+}
