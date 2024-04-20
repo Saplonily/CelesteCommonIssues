@@ -1,0 +1,32 @@
+site_name: Celeste 常见问题及 Q 群指令集
+repo_url: https://github.com/Saplonily/CelesteModTutorial
+
+theme:
+  name: material
+  language: zh
+  logo: assets/images/favicon.png
+  features:
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition # 警告
+  - meta # 元数据
+  - attr_list
+  - md_in_html
+  - def_list # 列表
+  - pymdownx.tilde # 下划线
+  - pymdownx.tasklist # 列表
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.highlight: # 语法高亮
+      pygments_lang_class: true
+      linenums: true
+
+nav:
+  - 主页: "index.md"
