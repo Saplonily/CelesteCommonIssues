@@ -177,7 +177,7 @@ System.InvalidOperationException: Present failed! Error Code:  (0x887A0020)
 ```
 目前已知该报错仅会在显卡 `Intel(R) Iris(R) Xe Graphics` 上发生, 这是一个显卡内部驱动问题.  
 目前可以通过更改渲染 api 解决:
-打开游戏根目录下的 `Everest-launch.txt` 后将 `# --graphics opengl` 一行去除前面的 `#`, 也就是变为 `--graphics opengl`, 然后保存该文件.
+打开游戏根目录下的 `everest-launch.txt` 后将 `# --graphics opengl` 一行去除前面的 `#`, 也就是变为 `--graphics opengl`, 然后保存该文件.
 
 ### Ionic.Zlib.ZlibException: Bad state (invalid block type)
 `/badzip-nofilename`  
@@ -342,7 +342,7 @@ System.TypeInitializationException: The type initializer for 'MonoMod.InlineRT.M
    at MonoMod.Program.Main(String[] args)
 ```
 
-使用的 `Everest.Installer` 版本太旧了, 更新到最新版本.
+使用的 `Everest.Installer` 版本太旧了, 更新到最新版本后重试.
 
 ## Loenn 报错
 

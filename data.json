@@ -1,0 +1,269 @@
+[
+    {
+        "commands": [
+            "log",
+            "log.txt"
+        ],
+        "reply": "首先打开游戏根目录, 如果是 steam 平台你还可以通过右键游戏, 展开 `管理`, 点击 `浏览游戏文件` 来打开, 然后在对应目录下寻找或搜索 `log.txt`.\n注意不要发送此文件打开后的截图, 请发送完整的文件.",
+        "description": "如何找到并发送 log.txt?",
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "badzip",
+            "bad-zip"
+        ],
+        "reply": "某一个 mod 的压缩包损坏了, 尝试删除 xxx 对应的 mod 并重新下载.\n如果你曾使用过 cele-mod 那么这大概率是 cele-mod 的一个 bug 造成的.",
+        "description": "Ionic.Zip.ZipException: Could not read xxx as a zip file",
+        "logMatch": [
+            "Ionic.Zip.ZipException: Could not read"
+        ]
+    },
+    {
+        "commands": [
+            "missing-dll",
+            "missingdll"
+        ],
+        "reply": "如果 xxx 为 `CSteamworks`, 你需要验证游戏完整性(`/verifyfiles`), 然后重装 Everest.\n如果 xxx 为 `lua54.dll`, 重复上一条的步骤, 如果问题依然没有被解决, 你可以尝试一个临时解决方案:\n在游戏根目录找到名为 `lib64-` 开头的文件夹, 然后将其中的 `lua54.dll` 文件复制到游戏根目录. (例如在 x64 Windows 平台上文件夹名为 `lib64-win-x64`)",
+        "description": "System.DllNotFoundException: 无法加载 xxx: 找不到指定的模块。",
+        "logMatch": [
+            "System.DllNotFoundException: 无法加载 DLL“"
+        ]
+    },
+    {
+        "commands": [
+            "missing-dll",
+            "missingdll"
+        ],
+        "reply": "如果 xxx 为 `ERR_OUTPUT_INIT` 或者 `ERR_NOTREADY`, 那这是 fmod 日常抽风了, 请插拔你的音频设备或者重启电脑.\n如果 xxx 为 `ERR_EVENT_ALREADY_LOADED`, 这是你安装的 mod 之间有重复的音频或者你重复安装了同一个 mod, 请尝试关闭一些 mod 或关闭重复的 mod, 必要时你可以向发生冲突 mod 的作者反馈这个问题.",
+        "description": "System.Exception: FMOD Failed: xxx",
+        "logMatch": [
+            "System.Exception: FMOD Failed:"
+        ]
+    },
+    {
+        "commands": [
+            "fna"
+        ],
+        "reply": "这是 steam 默认版本所使用的一个过时底层框架在 win11 上的一个 bug.\n在 steam 中右键游戏, 选择 `属性`, 然后打开 `测试版`, 在 `参与测试` 选择 `opengl - opengl` 并更新你的游戏.",
+        "description": "System.OutOfMemoryException: 没有足够的内存继续执行程序。 (xna)",
+        "logMatch": [
+            "在 Microsoft.Xna.Framework.Graphics.GraphicsDevice.Present(tagRECT* pSource, tagRECT* pDest, HWND__* hOverride)"
+        ]
+    },
+    {
+        "commands": [
+            "invalidprogram",
+            "invalid-program"
+        ],
+        "reply": "某些 helper 之间出现了偶然的冲突, 请更新你所有的 mod, 如果仍然出现此问题尝试关闭一些 mod.",
+        "description": "System.InvalidProgramException: Common Language Runtime detected an invalid program.",
+        "logMatch": [
+            "System.InvalidProgramException: Common Language Runtime detected an invalid program."
+        ]
+    },
+    {
+        "commands": [],
+        "reply": "暂时未知原因, 尝试关闭一些 mod.\n如果 `log.txt` 中还出现了大量下述字样:\nImage loading failed: outofmem\nImage loading failed: no SOI\n这是一个底层框架的 bug, 不过解决方案依然是尝试关闭一些 mod.",
+        "description": "System.InvalidOperationException: Present failed! Error Code: GPU",
+        "logMatch": [
+            "0x887A0005"
+        ]
+    },
+    {
+        "commands": [
+            "miaonet317crash"
+        ],
+        "reply": "这是群服在旧版 Everest 上的 bug, 更新你的 Everest 到最新的 stable.",
+        "description": "System.NullReferenceException: Object reference not set to an instance of an object.",
+        "logMatch": [
+            "at Celeste.Mod.CelesteNet.Client.CelesteNetClientModule.Load()"
+        ]
+    },
+    {
+        "commands": [],
+        "reply": "这说明 errorlog.txt 中没有可用信息, 请发送你的 log.txt (/log.txt).",
+        "description": "Yo, I heard you like Everest so I put Everest in your Everest so you can Ever Rest while you Ever Rest.",
+        "logMatch": [
+            "Yo, I heard you like Everest so I put Everest in your Everest so you can Ever Rest while you Ever Rest."
+        ]
+    },
+    {
+        "commands": [
+            "updatemiaonet"
+        ],
+        "reply": "更新你的群服, 也就是 `Miao.CelesteNet.Client`, 这是群服在新版 Everest 上的 bug.",
+        "description": "System.ArgumentNullException: Value cannot be null. (Parameter 'collection')",
+        "logMatch": [
+            "System.ArgumentNullException: Value cannot be null. (Parameter 'collection')"
+        ]
+    },
+    {
+        "commands": [
+            "opengl"
+        ],
+        "reply": "目前已知该报错仅会在显卡 `Intel(R) Iris(R) Xe Graphics` 上发生, 这是一个显卡内部驱动问题.\n目前可以通过更改渲染 api 解决:\n打开游戏根目录下的 `everest-launch.txt` 后将 `# --graphics opengl` 一行去除前面的 `#`, 也就是变为 `--graphics opengl`, 然后保存该文件.",
+        "description": "System.InvalidOperationException: Present failed! Error Code:  (0x887A0020)",
+        "logMatch": [
+            "System.InvalidOperationException: Present failed! Error Code:  (0x887A0020)"
+        ]
+    },
+    {
+        "commands": [
+            "badzip-nofilename",
+            "bad-zip-no-filename",
+            "badzipnofilename"
+        ],
+        "reply": "某个 mod 的压缩包损坏了, 但是报错没有说明具体是哪个文件, 尝试只开一半的 mod 并使用二分法查找具体是哪个 mod 的压缩包损坏了.",
+        "description": "Ionic.Zlib.ZlibException: Bad state (invalid block type)",
+        "logMatch": [
+            "Ionic.Zlib.ZlibException: Bad state (invalid block type)"
+        ]
+    },
+    {
+        "commands": [],
+        "reply": "检查你的磁盘是否真的满了.",
+        "description": "System.IO.IOException: 磁盘空间不足。 : 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmp837F.tmp'",
+        "logMatch": [
+            "System.IO.IOException: 磁盘空间不足。"
+        ]
+    },
+    {
+        "commands": [
+            "7.0runtime"
+        ],
+        "reply": "某些 mod 依赖了最新的 Everest 但是没有在依赖中写明, 更新 Everest 到 4465 及以上的版本.",
+        "description": "System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. 系统找不到指定的文件。",
+        "logMatch": [
+            ".FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=7.0.0.0, Culture=neutral"
+        ]
+    },
+    {
+        "commands": [
+            "skinmodissue",
+            "skinmod-issue"
+        ],
+        "reply": "这是 SkinModHelper 与 SkinModHelperPlus 的一个 bug, 也就是皮肤 mod 的前置. 尝试更新这两个 mod. 如果问题依然出现只能暂时关闭这俩 mod.",
+        "description": "System.Exception: Can't find sprite xxx",
+        "logMatch": [
+            "System.Exception: Can't find sprite "
+        ]
+    },
+    {
+        "commands": [],
+        "reply": "原因未知, 可能是某个底层库的问题, 尝试关闭一些 mod.",
+        "description": "System.OutOfMemoryException: Insufficient memory to continue the execution of the program.",
+        "logMatch": [
+            "System.OutOfMemoryException: Insufficient memory to continue the execution of the program.\n   at System.Runtime.InteropServices.Marshal.AllocHGlobal(IntPtr cb)"
+        ]
+    },
+    {
+        "commands": [
+            "steamnotfound"
+        ],
+        "reply": "尝试重启你的 steam, 问题依然出现的话尝试重启你的电脑. 如果同时还是非正版用户的话, 这是因为 Everest 4465+ 版本改动了 steam 验证相关的内容, 具体解决方案相信以你的经验是能解决这个问题的.",
+        "description": "Steam not found!",
+        "logMatch": [
+            "Steam not found!"
+        ]
+    },
+    {
+        "commands": [
+            "guneline-issue",
+            "gunelineissue"
+        ],
+        "reply": "`Guneline` mod 与群服出现的兼容问题, 如果该 mod 是必要的那只能暂时关闭群服 mod (注意不仅仅是关闭与群服的连接).",
+        "description": "System.IO.FileNotFoundException: Could not load file or assembly 'CelesteNet.Client, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.",
+        "logMatch": [
+            "System.IO.FileNotFoundException: Could not load file or assembly 'CelesteNet.Client, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies."
+        ]
+    },
+    {
+        "commands": [
+            "installer-log"
+        ],
+        "reply": "首先打开游戏根目录, 如果是 steam 平台你还可以通过右键游戏, 展开 `管理`, 点击 `浏览游戏文件` 来打开, 然后在对应目录下寻找或搜索 `miniinstaller-log.txt`.\n注意不要发送此文件打开后的截图, 请发送完整的文件.",
+        "description": "如何找到 miniinstaller-log.txt?",
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "savefileinuse",
+            "savefile-inuse"
+        ],
+        "reply": "如果 xxx 文件以 `.celeste` 结尾, 也就是存档文件的话, 请删除蔚蓝根目录下的 `orig` 文件夹并重试.",
+        "description": "System.IO.IOException: 文件 xxx 正由另一进程使用，因此该进程无法访问此文件。",
+        "logMatch": [
+            ".celeste”正由另一进程使用，因此该进程无法访问此文件。"
+        ]
+    },
+    {
+        "commands": [
+            "badpefile",
+            "bad-pefile"
+        ],
+        "reply": "游戏文件损坏了, 验证游戏文件完整性后重试. (`/verifyfiles`)",
+        "description": "System.BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid.",
+        "logMatch": [
+            "System.BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid."
+        ]
+    },
+    {
+        "commands": [
+            "old-eveinstaller",
+            "oldeveinstaller",
+            "oldeverestinstaller"
+        ],
+        "reply": "使用的 `Everest.Installer` 版本太旧了, 更新到最新版本后重试.",
+        "description": "System.BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid.",
+        "logMatch": [
+            "System.BadImageFormatException: Format of the executable (.exe) or library (.dll) is invalid."
+        ]
+    },
+    {
+        "commands": [
+            "loenn-cnchar"
+        ],
+        "reply": "你的用户名包含了中文字符, 临时的解决方案需要为 Loenn 的 exe 文件新建一个快捷方式, 然后右键打开其属性, 在 `快捷方式` 栏的 `目标` 后面添加 ` --portable` (注意空格和双横杠),\n例如 `\"D:\\Softwares\\Loenn\\Lönn.exe\"` 更改为 `\"D:\\Softwares\\Loenn\\Lönn.exe\" --portable`, 然后使用该快捷方式打开 Loenn.",
+        "description": "utils/filesystem.lua:40: invalid value (nil) at index 1 in table for 'concat'",
+        "logMatch": [
+            "utils/filesystem.lua:40: invalid value (nil) at index 1 in table for 'concat'"
+        ]
+    },
+    {
+        "commands": [
+            "verifyfiles",
+            "verify-files"
+        ],
+        "reply": "在 steam 上: 右键游戏, 选择 `属性`, 打开 `已安装文件` 页面, 点击 `验证游戏文件的完整性`, 然后 steam 会开始下载缺失和不匹配的文件.\n注意此操作会清除你的 Everest 安装, 你需要重新安装 Everest.",
+        "description": null,
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "zip"
+        ],
+        "reply": "在打包你的 mod 时不要对着文件夹右键点击压缩, 你需要进入文件夹内, 全选文件(Ctrl + A), 然后再右键选择压缩. 压缩等级推荐选最低等级, 压缩等级过高可能会轻微拖慢游戏启动速度.",
+        "description": null,
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "hist",
+            "hardlist",
+            "难图榜"
+        ],
+        "reply": "hist 榜链接:\nhttps://docs.google.com/spreadsheets/d/1A88F3X2lOQJry-Da2NpnAr-w5WDrkjDtg7Wt0kLCiz8/edit#gid=1904725075",
+        "description": null,
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "goldenlist",
+            "金榜"
+        ],
+        "reply": "金榜链接:\nhttps://docs.google.com/spreadsheets/u/1/d/1v0yhceinMGr5alNekOxEkYCxXcYUsbtzMRVMezxbcVY/edit",
+        "description": null,
+        "logMatch": []
+    }
+]
