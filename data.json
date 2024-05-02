@@ -32,8 +32,9 @@
     },
     {
         "commands": [
-            "missing-dll",
-            "missingdll"
+            "fmod",
+            "fmod-issue",
+            "fmodissue"
         ],
         "reply": "如果 xxx 为 `ERR_OUTPUT_INIT` 或者 `ERR_NOTREADY`, 那这是 fmod 日常抽风了, 请插拔你的音频设备或者重启电脑.\n如果 xxx 为 `ERR_EVENT_ALREADY_LOADED`, 这是你安装的 mod 之间有重复的音频或者你重复安装了同一个 mod, 请尝试关闭一些 mod 或关闭重复的 mod, 必要时你可以向发生冲突 mod 的作者反馈这个问题.",
         "description": "System.Exception: FMOD Failed: xxx",
