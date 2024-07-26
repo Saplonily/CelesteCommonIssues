@@ -32,8 +32,9 @@
     },
     {
         "commands": [
-            "missing-dll",
-            "missingdll"
+            "fmod",
+            "fmod-issue",
+            "fmodissue"
         ],
         "reply": "如果 xxx 为 `ERR_OUTPUT_INIT` 或者 `ERR_NOTREADY`, 那这是 fmod 日常抽风了, 请插拔你的音频设备或者重启电脑.\n如果 xxx 为 `ERR_EVENT_ALREADY_LOADED`, 这是你安装的 mod 之间有重复的音频或者你重复安装了同一个 mod, 请尝试关闭一些 mod 或关闭重复的 mod, 必要时你可以向发生冲突 mod 的作者反馈这个问题.",
         "description": "System.Exception: FMOD Failed: xxx",
@@ -236,7 +237,7 @@
             "verify-files"
         ],
         "reply": "在 steam 上: 右键游戏, 选择 `属性`, 打开 `已安装文件` 页面, 点击 `验证游戏文件的完整性`, 然后 steam 会开始下载缺失和不匹配的文件.\n注意此操作会清除你的 Everest 安装, 你需要重新安装 Everest.",
-        "description": null,
+        "description": "校验游戏文件",
         "logMatch": []
     },
     {
@@ -244,7 +245,7 @@
             "zip"
         ],
         "reply": "在打包你的 mod 时不要对着文件夹右键点击压缩, 你需要进入文件夹内, 全选文件(Ctrl + A), 然后再右键选择压缩. 压缩等级推荐选最低等级, 压缩等级过高可能会轻微拖慢游戏启动速度.",
-        "description": null,
+        "description": "如何正确打包你的 mod",
         "logMatch": []
     },
     {
@@ -254,7 +255,7 @@
             "难图榜"
         ],
         "reply": "hist 榜链接:\nhttps://docs.google.com/spreadsheets/d/1A88F3X2lOQJry-Da2NpnAr-w5WDrkjDtg7Wt0kLCiz8/edit#gid=1904725075",
-        "description": null,
+        "description": "获取 Hardest 榜单网站链接",
         "logMatch": []
     },
     {
@@ -263,7 +264,16 @@
             "金榜"
         ],
         "reply": "金榜链接:\nhttps://docs.google.com/spreadsheets/u/1/d/1v0yhceinMGr5alNekOxEkYCxXcYUsbtzMRVMezxbcVY/edit",
-        "description": null,
+        "description": "获取金榜网站链接",
+        "logMatch": []
+    },
+    {
+        "commands": [
+            "cci",
+            "cciweb"
+        ],
+        "reply": "蔚蓝常见问题网站: https://cci.saplonily.link",
+        "description": "本回复的网页版",
         "logMatch": []
     }
 ]
